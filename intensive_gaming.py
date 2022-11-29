@@ -1,56 +1,46 @@
-print("E P I C    🪨  📄 ✂️    B A T T L E ")
-print()
-print("Select your move (R, P or S)")
-print()
-
 player1_score = 0
 player2_score = 0
 
-while True: 
-  player1Move = input("Player 1 > ")
-  print()
-  player2Move = input("Player 2 > ")
-  print()
+while True :
+  player_1 = input ("Player_1> :")
+  player_2 = input ("Player_2> :")
   
-  if(player1Move=="R"):
-    if(player2Move=="R"):
-      print("You both picked Rock, draw!")
-    elif(player2Move=="S"):
-      print("Player1 smashed Player2's Scissors into dust with their Rock!")
-      player1_score += 1
-    elif(player2Move=="P"):
-      print("Player1's Rock is smothered by Player2's Paper!")
+  if player_1 == 'R' :
+    if player_2 == 'R' :
+      print ("Each player applies the same move, Draw!")
+    elif player_2 == 'P' :
+      print ("Player 2 wins the round!")
       player2_score += 1
-  elif(player1Move=="P"):
-    if(player2Move=="R"):
-      print("Player2's Rock is smothered by Player1's Paper!")
+    elif player_2 == 'S' :
+      print ("player 1 wins the round!")
       player1_score += 1
-    elif(player2Move=="S"):
-      print("Player1's Paper is cut into tiny pieces by Player2's Scissors!")
+  elif player_1 == 'S' :
+    if player_2 == 'R' :
+      print ("Player 2 wins the round!")
       player2_score += 1
-    elif(player2Move=="P"):
-      print("Two bits of paper flap at each other. Dissapointing. Draw.")
-  elif(player1Move=="S"):
-    if(player2Move=="R"):
-      print("Player 2's Rock makes metal-dust out of Player1's Scissors")
-      player2_score += 1
-    elif(player2Move=="S"):
-      print("Ka-Shing! Scissors bounce off each other like a dodgy sword fight! Draw.")
-    elif(player2Move=="P"):
-      print("Player1's Scissors make confetti out of Player2's paper!")
+    elif player_2 == 'P' :
+      print ("player 1 wins the round!")
       player1_score += 1
-  
+    elif player_2 == 'S' :
+      print ("Each player applies the same move, Draw!")
+  elif player_1 == 'P' :
+    if player_2 == 'R' :
+      print ("player 1 wins the round!")
+      player1_score += 1
+    elif player_2 == 'P' :
+      print ("Each player applies the same move, Draw!")
+    elif player_2 == 'S' :
+      print ("Player 2 wins the round!")
+      player2_score += 1
+  print ('Player_1 wins', player1_score, 'points')
+  print ('Player_2 wins', player2_score, 'points')
 
-  print("Player 1 has", player1_score, "wins.")
-  print("Player 2 has", player2_score, "wins.")
-
-  if player1_score==3 :
-    print("Player 1 has won the game!!!")
+  if player1_score == 3 :
+    print ("Player_1 wins the game")
     break
-  elif player2_score==3 :
-    print("Player 2 has won the game!!!")
-    print ("Thanks for playing") 
+  elif player2_score == 3 :
+    print ("Player_2 wins the game")
     exit()
-  else:
+  else :
     continue
-print ("Thanks for playing") 
+print ('Thanks for playing')
